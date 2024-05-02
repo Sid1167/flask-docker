@@ -1,0 +1,12 @@
+docker build -t [imagename] . # Build Docker image
+
+docker scout quickview # To see summary of image vulnerabilities and recommendations.
+
+docker images  # List all the Docker images on your machine.
+
+docker rmi [IMAGE ID or TAG] # Delete image
+
+docker run -d -p 5000:5000 [imagename]  # Run a container in detached mode (in the background) with port forwarding from host'
+
+docker ps # To check if the image is running
+
