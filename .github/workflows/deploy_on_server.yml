@@ -35,7 +35,7 @@ jobs:
     #       sudo apt-get install -y python3.12
     #     fi
         
-    - name: use python 3.12
+    - name: use python 3.11
       uses: actions/setup-python@v3
       with:
         python-version: '3.11'
