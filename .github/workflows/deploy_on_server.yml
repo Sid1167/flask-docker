@@ -11,17 +11,16 @@ jobs:
     # To run on a private server
     runs-on: self-hosted
 
-    strategy:
-      matrix:
-        # Specify the python version if multiple use ,
-        python-version: [3.12]
+    # strategy:
+    #   # Specify the python version if multiple use ,
+    #   python-version: '3.12'
 
     steps:
     - uses: actions/checkout@v4 
-    - name: use python ${{ matrix.python-version }}
-      # uses: actions/setup-python@v3
-      with: 
-        python-version: ${{ matrix.python-version }}
+    - name: Set up Python
+      uses: actions/setup-python@v3 
+      with:
+        python-version: '3.12'
         
     - name: Install dependencies
       run: |
