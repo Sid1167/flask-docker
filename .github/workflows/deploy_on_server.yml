@@ -17,8 +17,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4 
-    - name: Set up Python
-      uses: actions/setup-python@v3 
+
+    - name: Check if Python 3.12 is available
+      run: |
+        if ! python3.12 --version >/dev/null 2>&1; then
+          echo "Python 3.12 is not available, installing..."
+          sudo apt-get update
+          sudo apt-get install -y python3.12
+        fi
+        
+    - name: use python 3.12
+      uses: actions/setup-python@v3
       with:
         python-version: '3.12'
         
