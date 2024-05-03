@@ -30,4 +30,3 @@ jobs:
         
     - name: Run flask app
       run: python app.py
-        
