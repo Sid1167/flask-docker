@@ -18,8 +18,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4 
+    - uses: actions/setup-python@v3 
     - name: use python ${{ matrix.python-version }}
-      # uses: actions/setup-python@v3 
       with: 
         python-version: ${{ matrix.python-version }}
         
